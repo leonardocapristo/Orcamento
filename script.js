@@ -1,5 +1,5 @@
 // Variáveis globais
-let aumentoPercentual = 10;  // Defina o aumento percentual aqui (exemplo: 10 para 10%)
+let aumentoPercentual = 0;  // Defina o aumento percentual aqui (exemplo: 10 para 10%)
 const despesasFixas = 800;  // Valor padrão das despesas fixas
 
 // Constantes dos modelos de portão separados por categorias
@@ -7,8 +7,7 @@ const modelosPETC = [
     { codigo: 'PETC001', valorMetro: 150.00 },
     { codigo: 'PETC002', valorMetro: 200.00 },
     { codigo: 'PETC003', valorMetro: 250.00 },
-    { codigo: 'PETC004', valorMetro: 300.00 },
-    { codigo: 'PETC005', valorMetro: 500.00 }
+    { codigo: 'PETC004', valorMetro: 300.00 }
 ];
 
 const modelosPET = [
@@ -32,6 +31,7 @@ function carregarModelos() {
     
     // Adiciona cada modelo como uma opção no datalist
     const todosModelos = [...modelosPETC, ...modelosPET, ...modelosPETT, ...modelosPETM];
+    dataList.innerHTML = '';  // Limpa opções antigas
     todosModelos.forEach(modelo => {
         const option = document.createElement('option');
         option.value = modelo.codigo;
@@ -43,11 +43,11 @@ function carregarModelos() {
 document.getElementById('calcForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const codigo = document.getElementById('codigo').value.trim();
+    const codigo = document.getElementById('codigo').value.trim().toUpperCase(); // Converte para maiúsculas
     
     // Encontrar o modelo correspondente
     const todosModelos = [...modelosPETC, ...modelosPET, ...modelosPETT, ...modelosPETM];
-    const modelo = todosModelos.find(m => m.codigo === codigo);
+    const modelo = todosModelos.find(m => m.codigo.toUpperCase() === codigo); // Converte os códigos para maiúsculas
 
     // Verifica se o modelo existe
     if (!modelo) {
