@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preço de Portão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Preço de Portão</h1>
+    <form id="calcForm">
+        <label for="codigo">Código do Modelo:</label>
+        <input type="text" id="codigo" list="modelosList" placeholder="Digite o código do modelo" required>
+        <datalist id="modelosList">
+            <!-- As opções de modelos serão carregadas aqui via JavaScript -->
+        </datalist>
+        
+        <label for="largura">Largura (m):</label>
+        <input type="number" id="largura" step="0.01" placeholder="Ex: 1.50" required>
+        
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" step="0.01" placeholder="Ex: 1.50" required>
+        
+        <label for="lucro">Porcentagem de Lucro (%):</label>
+        <input type="number" id="lucro" step="1" placeholder="Ex: 20" required>
+        
+        <button type="submit">Calcular</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Valor por m² (R$)</th>
+                <th>Largura (m)</th>
+                <th>Altura (m)</th>
+                <th>Área (m²)</th>
+                <th>Preço Final (R$)</th>
+            </tr>
+        </thead>
+        <tbody id="gateList">
+            <!-- Linhas adicionadas via JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
