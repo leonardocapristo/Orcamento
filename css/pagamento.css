@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+/* basic.css */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 10px;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+    color: #28a745;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-item {
+        margin: 5px 0;
+    }
+}
+
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Adicionado um pequeno espaço superior em telas menores */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Adiciona uma transição suave ao hover */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#finalAmount {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+
+    form {
+        padding: 15px; /* Reduz o padding para telas menores */
+        box-shadow: none; /* Remove a sombra para um design mais leve em mobile */
+        border-radius: 5px; /* Reduz o border-radius para um design mais clean */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Ajusta o tamanho da fonte do título */
+    }
+
+    input, select, button {
+        padding: 8px; /* Reduz o padding para melhor ajuste em telas menores */
+    }
+
+    #finalAmount {
+        font-size: 1.2em; /* Ajusta o tamanho da fonte do resultado */
+    }
+}
