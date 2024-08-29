@@ -152,3 +152,22 @@ a:hover {
         font-size: 1.2em; /* Ajusta o tamanho da fonte do título */
     }
 }
+
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#finalAmount {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    #finalAmount {
+        font-size: 1.2em; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}

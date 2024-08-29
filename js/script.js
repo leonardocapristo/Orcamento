@@ -85,7 +85,16 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
     `;
 
     // Limpa o formulário
-    document.getElementById('calcForm').reset();
+    //document.getElementById('calcForm').reset();
+
+    const precoNormal = precoFinal * 1.065;
+    const precoPIX = precoFinal;
+    const preco12x = precoFinal * 1.129;
+
+    // Atualizando os valores no HTML
+    document.getElementById('precoNormal').textContent = precoNormal.toFixed(2);
+    document.getElementById('precoPIX').textContent = precoPIX.toFixed(2);
+    document.getElementById('preco12x').textContent = preco12x.toFixed(2);
 });
 
 // Carrega os modelos ao iniciar a página
