@@ -119,9 +119,7 @@ th {
         font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
     }
 
-    th, td {
-        white-space: nowrap; /* Impede a quebra de texto nas células */
-    }
+
 }
 
 
