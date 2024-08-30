@@ -87,7 +87,7 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
     // Limpa o formulário
     //document.getElementById('calcForm').reset();
 
-    const precoNormal = precoFinal * 1.065;
+    //const precoNormal = precoFinal * 1.065;
     const precoPIX = precoFinal;
     const preco12x = precoFinal * 1.129;
 
