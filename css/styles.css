@@ -112,22 +112,7 @@ th {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
 
-=======
-/* Responsividade para Tabelas */
-@media (max-width: 768px) {
-    table {
-        display: block; /* Faz a tabela ocupar a largura total */
-        overflow-x: auto; /* Permite rolagem horizontal */
-        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
-    }
-
-    th, td { 
-        white-space: nowrap; /* Impede a quebra de texto nas células */
-    }
-}
->>>>>>> da03a5ad9113cecc1d65d278c36b0ca520723179
 
 /* Link Styles */
 a {
