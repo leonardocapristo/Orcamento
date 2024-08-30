@@ -92,7 +92,7 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
     const preco12x = precoFinal * 1.129;
 
     // Atualizando os valores no HTML
-    document.getElementById('precoNormal').textContent = precoNormal.toFixed(2);
+    //document.getElementById('precoNormal').textContent = precoNormal.toFixed(2);
     document.getElementById('precoPIX').textContent = precoPIX.toFixed(2);
     document.getElementById('preco12x').textContent = preco12x.toFixed(2);
 });
