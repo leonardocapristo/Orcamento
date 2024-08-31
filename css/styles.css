@@ -116,7 +116,7 @@ th {
 @media (max-width: 768px) {
     table {
         display: block; /* Faz a tabela ocupar a largura total */
-        font-size: 11px; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 9px; /* Ajusta o tamanho da fonte para telas menores */
     }
 
 
