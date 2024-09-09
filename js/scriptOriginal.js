@@ -1,7 +1,6 @@
 // Variáveis globais
 let aumentoPercentual = 0;  // Defina o aumento percentual aqui (exemplo: 10 para 10%)
 const despesasFixas = 800;  // Valor padrão das despesas fixas
-const despesasFixasPEPS = 600;  // Despesas fixas para modelos PEPS
 const motor8segundos = 900;
 
 // Constantes dos modelos de portão separados por categorias
@@ -112,18 +111,8 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
     const precoSemLucro = area * valorMetro;
     // Calcula o preço com lucro
     const precoComLucro = precoSemLucro * (1 + lucro / 100);
-    
-    // Variável para o preço final
-    let precoFinal;
-
-    // Verifica se é modelo PEPS
-    if (codigo.startsWith('PEPS')) {
-        // Usar despesas fixas para PEPS e não adicionar o preço do motor
-        precoFinal = precoComLucro + despesasFixasPEPS;
-    } else {
-        // Usar despesas fixas padrão e adicionar o preço do motor
-        precoFinal = precoComLucro + despesasFixas + motor8segundos;
-    }
+    // Adiciona despesas fixas
+    const precoFinal = precoComLucro + despesasFixas + motor8segundos;
 
     // Cria uma nova linha na tabela com os dados calculados
     const tabela = document.getElementById('gateList');
@@ -141,11 +130,12 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
     // Limpa o formulário
     //document.getElementById('calcForm').reset();
 
-    // Calcula o preço para diferentes métodos de pagamento
+    //const precoNormal = precoFinal * 1.065;
     const precoPIX = precoFinal;
     const preco12x = precoFinal * 1.129;
 
     // Atualizando os valores no HTML
+    //document.getElementById('precoNormal').textContent = precoNormal.toFixed(2);
     document.getElementById('precoPIX').textContent = precoPIX.toFixed(2);
     document.getElementById('preco12x').textContent = preco12x.toFixed(2);
 });
