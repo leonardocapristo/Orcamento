@@ -1,7 +1,7 @@
 // Variáveis globais
 let aumentoPercentual = 0;  // Defina o aumento percentual aqui (exemplo: 10 para 10%)
 const despesasFixas = 800;  // Valor padrão das despesas fixas
-const despesasFixasPEPS = 600;  // Despesas fixas para modelos PEPS
+const despesasFixasPEPS = 350;  // Despesas fixas para modelos PEPS
 const motor8segundos = 900;
 
 // Constantes dos modelos de portão separados por categorias
@@ -65,8 +65,24 @@ const modelosPETT = [
 ];
 
 const modelosPEPS = [
-    { codigo: 'PEPS001', valorMetro: 190.00 },
-    { codigo: 'PEPS002', valorMetro: 240.00 }
+    { codigo: 'PEPS001', valorMetro: 413.00 },
+    { codigo: 'PEPS002', valorMetro: 413.00 },
+    { codigo: 'PEPS003', valorMetro: 310.00 },
+    { codigo: 'PEPS004', valorMetro: 413.00 },
+    { codigo: 'PEPS005', valorMetro: 310.00 },
+    { codigo: 'PEPS006', valorMetro: 465.00 },
+    { codigo: 'PEPS007', valorMetro: 258.00 },
+    { codigo: 'PEPS008', valorMetro: 284.00 },
+    { codigo: 'PEPS009', valorMetro: 258.00 },
+    { codigo: 'PEPS010', valorMetro: 232.00 },
+    { codigo: 'PEPS011', valorMetro: 284.00 },
+    { codigo: 'PEPS012', valorMetro: 310.00 },
+    { codigo: 'PEPS013', valorMetro: 310.00 },
+    { codigo: 'PEPS014', valorMetro: 310.00 },
+    { codigo: 'PEPS015', valorMetro: 387.00 },
+    { codigo: 'PEPS016', valorMetro: 310.00 },
+    { codigo: 'PEPS017', valorMetro: 258.00 },
+    { codigo: 'PEPS018', valorMetro: 387.00 }    
 ];
 
 // Função para carregar os modelos na lista de auto-complete

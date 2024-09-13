@@ -58,7 +58,7 @@ const modelosPETT = [
     { codigo: 'PETT007', valorMetro: 350.00 },
     { codigo: 'PETT008', valorMetro: 290.00 },
     { codigo: 'PETT009', valorMetro: 350.00 },
-    { codigo: 'PETT010', valorMetro: 290.00 },
+    { codigo: 'PETT010', valorMetro: 258.00 },
     { codigo: 'PETT011', valorMetro: 330.00 },
     { codigo: 'PETT012', valorMetro: 290.00 }
 ];
