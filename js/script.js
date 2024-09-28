@@ -159,7 +159,7 @@ document.getElementById('calcForm').addEventListener('submit', function(event) {
 
     // Calcula o preço para diferentes métodos de pagamento
     const precoPIX = precoFinal;
-    const preco12x = precoFinal * 1.129;
+    const preco12x = (precoFinal * 1.129) / 12;
 
     // Atualizando os valores no HTML
     document.getElementById('precoPIX').textContent = precoPIX.toFixed(2);
